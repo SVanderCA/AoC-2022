@@ -24,10 +24,10 @@ function solve(first, input) {
       }
     }
   })
-  let result = dirSizes['/'] - (70000000 - 30000000);
+  let required = dirSizes['/'] - (70000000 - 30000000);
   return first 
   ? Object.values(dirSizes).filter((ss) => ss <= 100000).reduce((a, c) => a + c, 0)
-  : Math.min(...Object.values(dirSizes).filter((ss) => ss >= result));
+  : Math.min(...Object.values(dirSizes).filter((ss) => ss >= required));
 }
 console.log(solve(true, commands));
 console.log(solve(false, commands));
